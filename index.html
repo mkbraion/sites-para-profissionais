@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sites para Profissionais · Modelos prontos por área</title>
+<meta name="description" content="Sites profissionais prontos por nicho — advogados, clínicas, dentistas, personal trainers. Rápidos, responsivos e fáceis de personalizar." />
+<style>
+  :root{
+    --bg:#0e1116; --card:#161b22; --border:#232a35; --text:#e6edf3; --muted:#9aa6b2;
+    --brand:#2f81f7; --brand-2:#3fb950; --radius:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  header{padding:20px 0;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border)}
+  .brand{font-weight:800;font-size:18px}
+  .brand span{color:var(--brand)}
+  .nav a{color:var(--muted);margin-left:22px;font-size:15px}
+  .nav a:hover{color:var(--text)}
+  .hero{text-align:center;padding:72px 0 48px}
+  .hero h1{font-size:clamp(30px,6vw,52px);line-height:1.1;letter-spacing:-1px;margin-bottom:18px}
+  .hero h1 b{background:linear-gradient(120deg,var(--brand),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p{color:var(--muted);font-size:19px;max-width:620px;margin:0 auto 30px}
+  .cta{display:inline-block;background:var(--brand);color:#fff;font-weight:700;padding:15px 30px;border-radius:12px;font-size:16px;transition:transform .1s}
+  .cta:hover{transform:translateY(-2px)}
+  .cta.ghost{background:transparent;border:1px solid var(--border);color:var(--text);margin-left:10px}
+  .section{padding:56px 0}
+  .section h2{font-size:30px;text-align:center;margin-bottom:8px}
+  .section .lead{color:var(--muted);text-align:center;margin-bottom:36px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  @media(max-width:860px){.grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:border-color .15s,transform .1s}
+  .card:hover{border-color:var(--brand);transform:translateY(-3px)}
+  .thumb{height:120px;display:flex;align-items:center;justify-content:center;font-size:44px}
+  .card .body{padding:18px}
+  .card h3{font-size:18px;margin-bottom:4px}
+  .card p{color:var(--muted);font-size:14px;margin-bottom:14px}
+  .badge{display:inline-block;font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;background:rgba(63,185,80,.15);color:var(--brand-2)}
+  .badge.soon{background:rgba(154,166,178,.15);color:var(--muted)}
+  .link{color:var(--brand);font-weight:600;font-size:14px}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  @media(max-width:700px){.steps{grid-template-columns:1fr}}
+  .step .n{width:36px;height:36px;border-radius:50%;background:var(--brand);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:10px}
+  .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:900px;margin:0 auto}
+  @media(max-width:760px){.pricing{grid-template-columns:1fr}}
+  .plan{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:26px;text-align:center}
+  .plan.pop{border-color:var(--brand);position:relative}
+  .plan.pop::before{content:"Mais escolhido";position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--brand);color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:999px}
+  .plan h3{font-size:20px;margin-bottom:6px}
+  .price{font-size:34px;font-weight:800;margin:10px 0}
+  .price small{font-size:14px;color:var(--muted);font-weight:400}
+  .plan ul{list-style:none;text-align:left;margin:16px 0;font-size:14px;color:var(--muted)}
+  .plan li{padding:6px 0;border-bottom:1px solid var(--border)}
+  footer{border-top:1px solid var(--border);padding:30px 0;text-align:center;color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">Sites<span>Pro</span></div>
+    <nav class="nav">
+      <a href="#modelos">Modelos</a>
+      <a href="#como">Como funciona</a>
+      <a href="#precos">Preços</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Seu site profissional <b>pronto em dias</b>, não em meses</h1>
+    <p>Modelos prontos por área — é só trocar textos, fotos e cores. Rápidos, responsivos e feitos para converter visitantes em clientes.</p>
+    <a class="cta" href="#modelos">Ver modelos</a>
+    <a class="cta ghost" href="https://wa.me/5500000000000" target="_blank" rel="noopener">Falar no WhatsApp</a>
+  </section>
+
+  <section class="section" id="modelos">
+    <h2>Modelos por nicho</h2>
+    <p class="lead">Clique para ver a demonstração de cada um.</p>
+    <div class="grid">
+      <a class="card" href="templates/advogado/index.html">
+        <div class="thumb" style="background:linear-gradient(135deg,#1e293b,#0f172a)">⚖️</div>
+        <div class="body">
+          <span class="badge">Pronto</span>
+          <h3>Advocacia</h3>
+          <p>Escritório de advocacia, áreas de atuação, contato e agendamento.</p>
+          <span class="link">Ver demo →</span>
+        </div>
+      </a>
+      <a class="card" href="templates/estetica/index.html">
+        <div class="thumb" style="background:linear-gradient(135deg,#3b1e3b,#1a0f1a)">💆</div>
+        <div class="body">
+          <span class="badge">Pronto</span>
+          <h3>Clínica / Estética</h3>
+          <p>Clínica de estética, odontologia ou dermatologia. Serviços e agendamento.</p>
+          <span class="link">Ver demo →</span>
+        </div>
+      </a>
+      <a class="card" href="https://github.com/mkbraion/site-psiquiatria" target="_blank" rel="noopener">
+        <div class="thumb" style="background:linear-gradient(135deg,#0f2b2b,#0a1a1a)">🩺</div>
+        <div class="body">
+          <span class="badge">Pronto</span>
+          <h3>Saúde / Consultório</h3>
+          <p>Modelo de consultório médico com animações de scroll (ex.: psiquiatria).</p>
+          <span class="link">Ver no GitHub →</span>
+        </div>
+      </a>
+      <div class="card">
+        <div class="thumb" style="background:linear-gradient(135deg,#2b230f,#1a150a)">🏋️</div>
+        <div class="body">
+          <span class="badge soon">Em breve</span>
+          <h3>Personal / Fitness</h3>
+          <p>Personal trainer, planos de treino e captação de alunos.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="thumb" style="background:linear-gradient(135deg,#0f1f2b,#0a141a)">💈</div>
+        <div class="body">
+          <span class="badge soon">Em breve</span>
+          <h3>Barbearia / Salão</h3>
+          <p>Serviços, galeria e agendamento online.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="thumb" style="background:linear-gradient(135deg,#221a2b,#130f1a)">🛒</div>
+        <div class="body">
+          <span class="badge soon">Em breve</span>
+          <h3>Loja / Catálogo</h3>
+          <p>Vitrine de produtos com link direto pro WhatsApp.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="como">
+    <h2>Como funciona</h2>
+    <p class="lead">Do modelo ao ar em 3 passos.</p>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Escolha o modelo</h3><p style="color:var(--muted)">Pegue o nicho mais próximo do seu negócio.</p></div>
+      <div class="step"><div class="n">2</div><h3>Personalize</h3><p style="color:var(--muted)">Troque textos, fotos, cores e contatos. Um único arquivo por site.</p></div>
+      <div class="step"><div class="n">3</div><h3>Publique</h3><p style="color:var(--muted)">Suba no GitHub Pages, Netlify ou Vercel — de graça.</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="precos">
+    <h2>Preços</h2>
+    <p class="lead">Modelos são gratuitos e open-source. Personalização feita por mim é opcional.</p>
+    <div class="pricing">
+      <div class="plan">
+        <h3>Faça você mesmo</h3>
+        <div class="price">Grátis</div>
+        <ul><li>Todos os modelos prontos</li><li>Código aberto</li><li>Personaliza sozinho</li></ul>
+        <a class="cta ghost" href="#modelos">Baixar modelo</a>
+      </div>
+      <div class="plan pop">
+        <h3>Personalizado</h3>
+        <div class="price">R$ 497 <small>único</small></div>
+        <ul><li>Seus textos e fotos</li><li>Suas cores e logo</li><li>Publicado e no ar</li><li>Domínio configurado</li></ul>
+        <a class="cta" href="https://wa.me/5500000000000" target="_blank" rel="noopener">Quero esse</a>
+      </div>
+      <div class="plan">
+        <h3>Completo + IA</h3>
+        <div class="price">R$ 997 <small>único</small></div>
+        <ul><li>Tudo do Personalizado</li><li>Textos gerados com IA</li><li>Integração WhatsApp</li><li>1 mês de ajustes</li></ul>
+        <a class="cta ghost" href="https://wa.me/5500000000000" target="_blank" rel="noopener">Falar comigo</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    SitesPro · modelos open-source por <a href="https://github.com/mkbraion" style="color:var(--brand)">@mkbraion</a> · parte do ecossistema KAIA
+  </div>
+</footer>
+</body>
+</html>
