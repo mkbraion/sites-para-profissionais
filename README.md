@@ -6,19 +6,19 @@ Serve pra duas coisas: portfólio e também pra vender site sob encomenda usando
 
 **Ver a landing e os modelos:** https://mkbraion.github.io/sites-para-profissionais/
 
-## Modelos
+## Modelos (exemplos ao vivo)
 
 - **Advocacia** — `templates/advogado/`
 - **Clínica / Estética** — `templates/estetica/`
+- **Saúde / Consultório** — `templates/saude/`
 - **Personal / Fitness** — `templates/personal/`
 - **Barbearia / Salão** — `templates/barbearia/`
 - **Loja / Catálogo** — `templates/loja/` (vitrine com filtro e pedido pelo WhatsApp)
-- **Saúde / Consultório** — está num repositório à parte, o [site-psiquiatria](https://github.com/mkbraion/site-psiquiatria)
 
-A `index.html` da raiz é a página que apresenta e vende os modelos.
+Cada modelo já vem com conteúdo de demonstração pronto, pra mostrar ao cliente como o site dele ficaria. A `index.html` da raiz é a página que apresenta e vende os sites.
 
-## Personalizar
+## Personalizar para um cliente
 
-Abre o `index.html` do modelo e procura o que estiver entre `[colchetes]` — é tudo que precisa trocar. As cores ficam nas variáveis lá no topo do `<style>`. Pro botão de WhatsApp, troca o número `5500000000000` pelo seu, com DDI e DDD (ex.: `5511987654321`).
+As cores de cada modelo ficam nas variáveis `--` no topo do `<style>`. Troque os nomes, textos e endereços pelos do cliente e, se precisar apontar o WhatsApp para outro número, procure por `5555991117663` e substitua.
 
-Depois é só publicar de graça no GitHub Pages, Netlify ou Vercel.
+Depois é só publicar no GitHub Pages, Netlify ou Vercel.
