@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Barbearia [Nome] · Corte & Estilo</title>
+<meta name="description" content="Barbearia. Corte, barba e cuidados masculinos com hora marcada. Agende pelo WhatsApp." />
+<style>
+  :root{--bg:#131110;--card:#1c1917;--border:#2e2825;--text:#f2ede8;--muted:#a89c92;--amber:#d4a24e;--amber-2:#e8bd6f;--radius:10px}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+  a{color:inherit;text-decoration:none}
+  .display{font-family:Georgia,"Times New Roman",serif}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+  header{position:sticky;top:0;background:rgba(19,17,16,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);z-index:10}
+  .bar{display:flex;justify-content:space-between;align-items:center;padding:16px 22px;max-width:1040px;margin:0 auto}
+  .logo{font-size:22px;letter-spacing:1px}
+  .logo b{color:var(--amber)}
+  nav a{color:var(--muted);margin-left:24px;font-size:14px;letter-spacing:.5px}
+  nav a:hover{color:var(--amber)}
+  @media(max-width:640px){nav{display:none}}
+  .hero{padding:90px 0;text-align:center;background:radial-gradient(600px 260px at 50% 0%,#241f1b,transparent)}
+  .kick{color:var(--amber);letter-spacing:4px;text-transform:uppercase;font-size:12px;margin-bottom:16px}
+  .hero h1{font-size:clamp(34px,6vw,56px);line-height:1.1;margin-bottom:18px}
+  .hero p{color:var(--muted);max-width:520px;margin:0 auto 30px;font-size:18px}
+  .btn{display:inline-block;background:var(--amber);color:#131110;font-weight:700;padding:14px 30px;border-radius:8px;letter-spacing:.5px;transition:transform .1s}
+  .btn:hover{transform:translateY(-2px);background:var(--amber-2)}
+  .btn.ghost{background:transparent;border:1px solid var(--amber);color:var(--amber);margin-left:8px}
+  section{padding:66px 0}
+  .title{text-align:center;margin-bottom:42px}
+  .title .kick{margin-bottom:8px}
+  .title h2{font-size:34px}
+  .services{max-width:640px;margin:0 auto}
+  .svc{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:16px 0;border-bottom:1px dashed var(--border)}
+  .svc .n{font-size:18px}
+  .svc .n small{display:block;color:var(--muted);font-size:13px;margin-top:2px}
+  .svc .dots{flex:1;border-bottom:1px dotted var(--border);transform:translateY(-4px)}
+  .svc .p{color:var(--amber);font-weight:700;font-size:18px;white-space:nowrap}
+  .hours{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+  @media(max-width:680px){.hours{grid-template-columns:1fr}}
+  .hours .box{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:26px}
+  .hours .row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);font-size:15px}
+  .hours .row span:last-child{color:var(--muted)}
+  .cta-band{background:linear-gradient(120deg,#241f1b,#171412);border:1px solid var(--border);border-radius:var(--radius);padding:46px;text-align:center}
+  .cta-band h2{font-size:30px;margin-bottom:12px}
+  .cta-band p{color:var(--muted);margin-bottom:24px}
+  footer{border-top:1px solid var(--border);padding:32px 0;color:var(--muted);font-size:14px;text-align:center}
+  .demo-note{background:rgba(212,162,78,.12);color:var(--amber-2);text-align:center;padding:8px;font-size:13px}
+</style>
+</head>
+<body>
+<div class="demo-note">Modelo de demonstração — troque o conteúdo entre [colchetes] pelos seus dados.</div>
+<header>
+  <div class="bar">
+    <div class="logo display">Barbearia <b>[Nome]</b></div>
+    <nav>
+      <a href="#servicos">Serviços</a>
+      <a href="#horarios">Horários</a>
+      <a href="#contato">Agendar</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="kick">Barbearia · [Sua cidade]</div>
+    <h1 class="display">Corte afiado,<br>atendimento no capricho</h1>
+    <p>Corte, barba e aquele trato completo com hora marcada. Nada de fila — você chega, senta e relaxa.</p>
+    <a class="btn" href="#contato">Agendar horário</a>
+    <a class="btn ghost" href="#servicos">Ver serviços</a>
+  </div>
+</section>
+
+<section id="servicos">
+  <div class="wrap">
+    <div class="title"><div class="kick">Tabela</div><h2 class="display">Serviços</h2></div>
+    <div class="services">
+      <div class="svc"><div class="n">Corte<small>máquina + tesoura + finalização</small></div><div class="dots"></div><div class="p">R$ 45</div></div>
+      <div class="svc"><div class="n">Barba<small>toalha quente + navalha</small></div><div class="dots"></div><div class="p">R$ 35</div></div>
+      <div class="svc"><div class="n">Corte + Barba<small>o combo completo</small></div><div class="dots"></div><div class="p">R$ 70</div></div>
+      <div class="svc"><div class="n">Pezinho / acabamento<small>manutenção rápida</small></div><div class="dots"></div><div class="p">R$ 20</div></div>
+      <div class="svc"><div class="n">Sobrancelha<small>na navalha</small></div><div class="dots"></div><div class="p">R$ 15</div></div>
+      <div class="svc"><div class="n">Corte infantil<small>até 10 anos</small></div><div class="dots"></div><div class="p">R$ 40</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="horarios" style="background:#171412">
+  <div class="wrap">
+    <div class="hours">
+      <div>
+        <div class="kick">Quando abrimos</div>
+        <h2 class="display" style="font-size:32px;margin:8px 0 14px">Horário de<br>funcionamento</h2>
+        <p style="color:var(--muted)">Melhor garantir seu horário pelo WhatsApp — os fins de semana lotam rápido.</p>
+      </div>
+      <div class="box">
+        <div class="row"><span>Segunda</span><span>Fechado</span></div>
+        <div class="row"><span>Terça a Sexta</span><span>09h — 20h</span></div>
+        <div class="row"><span>Sábado</span><span>08h — 18h</span></div>
+        <div class="row"><span>Domingo</span><span>Fechado</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contato">
+  <div class="wrap">
+    <div class="cta-band">
+      <h2 class="display">Marque seu horário</h2>
+      <p>Manda uma mensagem que já confirmo o melhor horário pra você.</p>
+      <a class="btn" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20quero%20agendar%20um%20hor%C3%A1rio" target="_blank" rel="noopener">Agendar no WhatsApp</a>
+      <a class="btn ghost" href="https://instagram.com/" target="_blank" rel="noopener">Ver Instagram</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © <span id="ano"></span> Barbearia [Nome] · [Rua Exemplo, 123 — Cidade/UF] · (00) 00000-0000
+</footer>
+<script>document.getElementById('ano').textContent=new Date().getFullYear();</script>
+</body>
+</html>

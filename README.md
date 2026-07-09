@@ -10,8 +10,10 @@ Serve pra duas coisas: portfólio e também pra vender site sob encomenda usando
 
 - **Advocacia** — `templates/advogado/`
 - **Clínica / Estética** — `templates/estetica/`
+- **Personal / Fitness** — `templates/personal/`
+- **Barbearia / Salão** — `templates/barbearia/`
+- **Loja / Catálogo** — `templates/loja/` (vitrine com filtro e pedido pelo WhatsApp)
 - **Saúde / Consultório** — está num repositório à parte, o [site-psiquiatria](https://github.com/mkbraion/site-psiquiatria)
-- Personal, barbearia e loja ficaram pra próxima leva.
 
 A `index.html` da raiz é a página que apresenta e vende os modelos.
 

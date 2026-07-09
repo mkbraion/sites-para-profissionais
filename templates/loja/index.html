@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>[Nome da Loja] · Catálogo</title>
+<meta name="description" content="Catálogo de produtos com pedido direto pelo WhatsApp. Simples, rápido e sem complicação." />
+<style>
+  :root{--bg:#faf9f7;--card:#ffffff;--border:#eae6e1;--text:#2b2724;--muted:#8a827a;--brand:#e0533d;--brand-2:#f06b55;--ok:#25d366;--radius:14px}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  header{position:sticky;top:0;background:rgba(250,249,247,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);z-index:10}
+  .bar{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;max-width:1080px;margin:0 auto}
+  .logo{font-weight:800;font-size:20px}
+  .logo b{color:var(--brand)}
+  nav a{color:var(--muted);margin-left:20px;font-size:14px;font-weight:600}
+  nav a:hover{color:var(--brand)}
+  @media(max-width:600px){nav a{margin-left:12px;font-size:13px}}
+  .hero{text-align:center;padding:56px 0 40px}
+  .hero h1{font-size:clamp(28px,5vw,42px);line-height:1.15;margin-bottom:12px}
+  .hero p{color:var(--muted);max-width:520px;margin:0 auto;font-size:17px}
+  .filters{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;padding:14px 0 30px}
+  .chip{background:var(--card);border:1px solid var(--border);color:var(--muted);border-radius:999px;padding:8px 16px;font-size:14px;cursor:pointer;font-family:inherit;font-weight:600}
+  .chip.active,.chip:hover{background:var(--brand);border-color:var(--brand);color:#fff}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:50px}
+  @media(max-width:820px){.grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.grid{grid-template-columns:1fr}}
+  .prod{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:transform .12s,box-shadow .15s;display:flex;flex-direction:column}
+  .prod:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(120,90,70,.1)}
+  .prod .img{aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:60px;background:linear-gradient(135deg,#f4ece7,#f9e9e4)}
+  .prod .info{padding:16px;display:flex;flex-direction:column;gap:6px;flex:1}
+  .prod .cat{font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--brand);font-weight:700}
+  .prod h3{font-size:16px}
+  .prod .desc{color:var(--muted);font-size:13px;flex:1}
+  .prod .bottom{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
+  .prod .price{font-size:20px;font-weight:800}
+  .buy{background:var(--ok);color:#fff;border:0;border-radius:9px;padding:9px 14px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;display:inline-flex;align-items:center;gap:6px}
+  .buy:hover{opacity:.9}
+  footer{border-top:1px solid var(--border);padding:30px 0;color:var(--muted);font-size:14px;text-align:center}
+  .demo-note{background:#fdeee9;color:var(--brand);text-align:center;padding:8px;font-size:13px}
+</style>
+</head>
+<body>
+<div class="demo-note">Modelo de demonstração — edite a lista <code>produtos</code> no final do arquivo e o número do WhatsApp.</div>
+<header>
+  <div class="bar">
+    <div class="logo">[Nome da] <b>Loja</b></div>
+    <nav>
+      <a href="#catalogo">Catálogo</a>
+      <a href="https://wa.me/5500000000000" target="_blank" rel="noopener">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <section class="hero">
+    <h1>Nossos produtos</h1>
+    <p>Escolha o que quiser e finalize o pedido direto no WhatsApp — rápido e sem burocracia.</p>
+  </section>
+
+  <div class="filters" id="filters"></div>
+  <div class="grid" id="grid"></div>
+</div>
+
+<footer>
+  © <span id="ano"></span> [Nome da Loja] · Pedidos pelo WhatsApp (00) 00000-0000 · [cidade/UF]
+</footer>
+
+<script>
+  // ====== EDITE AQUI ======
+  const WHATSAPP = '5500000000000'; // seu número com DDI + DDD
+  const produtos = [
+    { nome: 'Camiseta Básica', cat: 'Roupas',     preco: 59.90, emoji: '👕', desc: 'Algodão, disponível em vários tamanhos.' },
+    { nome: 'Tênis Casual',    cat: 'Calçados',   preco: 199.90, emoji: '👟', desc: 'Confortável pro dia a dia.' },
+    { nome: 'Boné Aba Curva',  cat: 'Acessórios', preco: 49.90, emoji: '🧢', desc: 'Ajuste traseiro, tamanho único.' },
+    { nome: 'Mochila',         cat: 'Acessórios', preco: 149.90, emoji: '🎒', desc: 'Compartimento para notebook.' },
+    { nome: 'Moletom',         cat: 'Roupas',     preco: 129.90, emoji: '🧥', desc: 'Com capuz e bolso canguru.' },
+    { nome: 'Óculos de Sol',   cat: 'Acessórios', preco: 89.90, emoji: '🕶️', desc: 'Proteção UV, estojo incluso.' },
+    { nome: 'Relógio',         cat: 'Acessórios', preco: 259.90, emoji: '⌚', desc: 'À prova d\'água, pulseira de silicone.' },
+    { nome: 'Chinelo',         cat: 'Calçados',   preco: 39.90, emoji: '🩴', desc: 'Leve e resistente.' },
+  ];
+  // ========================
+
+  const brl = n => n.toLocaleString('pt-BR', { style:'currency', currency:'BRL' });
+  const cats = ['Todos', ...new Set(produtos.map(p => p.cat))];
+  let ativa = 'Todos';
+
+  function pedir(p){
+    const msg = `Olá! Tenho interesse no produto: *${p.nome}* (${brl(p.preco)}). Ainda está disponível?`;
+    window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank');
+  }
+
+  function render(){
+    const grid = document.getElementById('grid');
+    grid.innerHTML = '';
+    produtos.filter(p => ativa === 'Todos' || p.cat === ativa).forEach(p => {
+      const el = document.createElement('div');
+      el.className = 'prod';
+      el.innerHTML = `
+        <div class="img">${p.emoji}</div>
+        <div class="info">
+          <span class="cat">${p.cat}</span>
+          <h3>${p.nome}</h3>
+          <p class="desc">${p.desc}</p>
+          <div class="bottom">
+            <span class="price">${brl(p.preco)}</span>
+            <button class="buy">💬 Pedir</button>
+          </div>
+        </div>`;
+      el.querySelector('.buy').addEventListener('click', () => pedir(p));
+      grid.appendChild(el);
+    });
+  }
+
+  function renderFilters(){
+    const f = document.getElementById('filters');
+    cats.forEach(c => {
+      const b = document.createElement('button');
+      b.className = 'chip' + (c === ativa ? ' active' : '');
+      b.textContent = c;
+      b.addEventListener('click', () => { ativa = c; renderFilters(); render(); });
+      f.appendChild(b);
+    });
+  }
+
+  document.getElementById('ano').textContent = new Date().getFullYear();
+  renderFilters();
+  render();
+</script>
+</body>
+</html>
