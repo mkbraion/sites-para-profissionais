@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>[Nome da Loja] · Catálogo</title>
+<meta name="referrer" content="no-referrer" />
+<title>Urban Store · Catálogo</title>
 <meta name="description" content="Catálogo de produtos com pedido direto pelo WhatsApp. Simples, rápido e sem complicação." />
 <style>
   :root{--bg:#faf9f7;--card:#ffffff;--border:#eae6e1;--text:#2b2724;--muted:#8a827a;--brand:#e0533d;--brand-2:#f06b55;--ok:#25d366;--radius:14px}
@@ -40,23 +41,21 @@
   .buy{background:var(--ok);color:#fff;border:0;border-radius:9px;padding:9px 14px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;display:inline-flex;align-items:center;gap:6px}
   .buy:hover{opacity:.9}
   footer{border-top:1px solid var(--border);padding:30px 0;color:var(--muted);font-size:14px;text-align:center}
-  .demo-note{background:#fdeee9;color:var(--brand);text-align:center;padding:8px;font-size:13px}
 </style>
 </head>
 <body>
-<div class="demo-note">Modelo de demonstração — edite a lista <code>produtos</code> no final do arquivo e o número do WhatsApp.</div>
 <header>
   <div class="bar">
-    <div class="logo">[Nome da] <b>Loja</b></div>
+    <div class="logo">Urban <b>Store</b></div>
     <nav>
       <a href="#catalogo">Catálogo</a>
-      <a href="https://wa.me/5500000000000" target="_blank" rel="noopener">Contato</a>
+      <a href="https://wa.me/5555991117663" target="_blank" rel="noopener noreferrer">Contato</a>
     </nav>
   </div>
 </header>
 
 <div class="wrap">
-  <section class="hero">
+  <section class="hero" id="catalogo">
     <h1>Nossos produtos</h1>
     <p>Escolha o que quiser e finalize o pedido direto no WhatsApp — rápido e sem burocracia.</p>
   </section>
@@ -66,23 +65,21 @@
 </div>
 
 <footer>
-  © <span id="ano"></span> [Nome da Loja] · Pedidos pelo WhatsApp (00) 00000-0000 · [cidade/UF]
+  © <span id="ano"></span> Urban Store · Pedidos pelo WhatsApp (55) 99111-7663 · São Paulo/SP
 </footer>
 
 <script>
-  // ====== EDITE AQUI ======
-  const WHATSAPP = '5500000000000'; // seu número com DDI + DDD
+  const WHATSAPP = '5555991117663';
   const produtos = [
-    { nome: 'Camiseta Básica', cat: 'Roupas',     preco: 59.90, emoji: '👕', desc: 'Algodão, disponível em vários tamanhos.' },
-    { nome: 'Tênis Casual',    cat: 'Calçados',   preco: 199.90, emoji: '👟', desc: 'Confortável pro dia a dia.' },
-    { nome: 'Boné Aba Curva',  cat: 'Acessórios', preco: 49.90, emoji: '🧢', desc: 'Ajuste traseiro, tamanho único.' },
-    { nome: 'Mochila',         cat: 'Acessórios', preco: 149.90, emoji: '🎒', desc: 'Compartimento para notebook.' },
-    { nome: 'Moletom',         cat: 'Roupas',     preco: 129.90, emoji: '🧥', desc: 'Com capuz e bolso canguru.' },
-    { nome: 'Óculos de Sol',   cat: 'Acessórios', preco: 89.90, emoji: '🕶️', desc: 'Proteção UV, estojo incluso.' },
-    { nome: 'Relógio',         cat: 'Acessórios', preco: 259.90, emoji: '⌚', desc: 'À prova d\'água, pulseira de silicone.' },
-    { nome: 'Chinelo',         cat: 'Calçados',   preco: 39.90, emoji: '🩴', desc: 'Leve e resistente.' },
+    { nome: 'Camiseta Básica',   cat: 'Roupas',     preco: 59.90, emoji: '👕', desc: 'Algodão, disponível em vários tamanhos.' },
+    { nome: 'Tênis Casual',      cat: 'Calçados',   preco: 199.90, emoji: '👟', desc: 'Confortável pro dia a dia.' },
+    { nome: 'Boné Aba Curva',    cat: 'Acessórios', preco: 49.90, emoji: '🧢', desc: 'Ajuste traseiro, tamanho único.' },
+    { nome: 'Mochila',           cat: 'Acessórios', preco: 149.90, emoji: '🎒', desc: 'Compartimento para notebook.' },
+    { nome: 'Moletom com Capuz', cat: 'Roupas',     preco: 129.90, emoji: '🧥', desc: 'Com bolso canguru, bem quentinho.' },
+    { nome: 'Óculos de Sol',     cat: 'Acessórios', preco: 89.90, emoji: '🕶️', desc: 'Proteção UV, estojo incluso.' },
+    { nome: 'Relógio Esportivo', cat: 'Acessórios', preco: 259.90, emoji: '⌚', desc: 'À prova d\'água, pulseira de silicone.' },
+    { nome: 'Chinelo Slide',     cat: 'Calçados',   preco: 39.90, emoji: '🩴', desc: 'Leve e resistente.' },
   ];
-  // ========================
 
   const brl = n => n.toLocaleString('pt-BR', { style:'currency', currency:'BRL' });
   const cats = ['Todos', ...new Set(produtos.map(p => p.cat))];
@@ -90,7 +87,7 @@
 
   function pedir(p){
     const msg = `Olá! Tenho interesse no produto: *${p.nome}* (${brl(p.preco)}). Ainda está disponível?`;
-    window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank');
+    window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
   }
 
   function render(){
@@ -117,6 +114,7 @@
 
   function renderFilters(){
     const f = document.getElementById('filters');
+    f.innerHTML = '';
     cats.forEach(c => {
       const b = document.createElement('button');
       b.className = 'chip' + (c === ativa ? ' active' : '');
