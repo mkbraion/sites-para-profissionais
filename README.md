@@ -1,19 +1,3 @@
-<!-- MKBRAION-POLISH:START -->
-<div align="center">
-
-# Sites Para Profissionais
-
-**Coleção de templates responsivos para sites profissionais de diferentes nichos, desenvolvidos para personalização rápida e publicação.**
-
-[![Repositório](https://img.shields.io/badge/GitHub-Repositório-181717?logo=github)](https://github.com/mkbraion/sites-para-profissionais) [![Demo ao vivo](https://img.shields.io/badge/Demo-Abrir%20aplicação-2ea44f?logo=vercel)](https://mkbraion.github.io/sites-para-profissionais/)
-
-</div>
-
-**Stack / tópicos:** ``css`` · ``frontend`` · ``html`` · ``javascript`` · ``kaia`` · ``landing-page`` · ``portfolio`` · ``responsive-design`` · ``vercel`` · ``web-development`` · ``website-templates`` · ``whatsapp``
-
-> Projeto mantido por [@mkbraion](https://github.com/mkbraion).
-<!-- MKBRAION-POLISH:END -->
-
 # Sites para Profissionais
 
 Uma coleção de modelos de site prontos, separados por área — advogado, clínica de estética, consultório e por aí vai. Cada modelo é um arquivo HTML só: você troca os textos, as cores e o contato, e já está no ar.
